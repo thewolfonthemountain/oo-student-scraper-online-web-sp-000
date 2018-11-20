@@ -29,8 +29,8 @@ class Scraper
         end
       end
     scraped_student[:profile_quote] = doc.css(".profile-quote").text
-    binding.pry
     scraped_student[:bio] = doc.css(".description-holder").text
+    scraped_student
   end
 #social icon containiner = doc.css(".social-icon-container")
 end
