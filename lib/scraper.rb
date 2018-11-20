@@ -29,7 +29,6 @@ class Scraper
         end
       end
 #    doc.css(".")
-  binding.pry
   end
 #social icon containiner = doc.css(".social-icon-container")
 end
