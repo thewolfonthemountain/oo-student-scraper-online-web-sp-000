@@ -9,7 +9,9 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    students_array.each {|key, value| self.send(("#{key}="), value)}
+    students_array.each {|key, value| self.send(("#{key}="), value)
+    @@all.push(self)
+    }
 
   end
 
