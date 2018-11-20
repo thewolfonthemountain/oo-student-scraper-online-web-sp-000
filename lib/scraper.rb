@@ -18,7 +18,7 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    scraped_student = {}
+    scraped_student = Hash.new
     doc = Nokogiri::HTML(open(profile_url))
     doc.css(".social-icon-container").css("a").each do |platform|
       url = platform.attribute("href").value
@@ -28,7 +28,7 @@ class Scraper
         else scraped_student[:blog] = url
         end
       end
-#    doc.css(".")
+    scraped_student
   end
 #social icon containiner = doc.css(".social-icon-container")
 end
