@@ -27,7 +27,7 @@ class Scraper
         elsif url.include?("linkedin") then scraped_student[:linkedin] = url
         else scraped_student[:blog] = url
         end
-    end
+      end
 #    doc.css(".")
   binding.pry
   end
